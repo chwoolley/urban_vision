@@ -14,7 +14,7 @@
 	{!! Form::label('name', 'Name:') !!}
 	{!! Form::text('name', 'Your name here') !!}
 	{!! Form::label('email', 'Email:') !!}
-	{!! Form::text('email', 'if you need to stay threexample@example.com') !!}
+	{!! Form::text('email', 'example@example.com') !!}
 		{!! Form::label('phone', 'Phone:') !!}
 	{!! Form::text('phone', '123456') !!}
 		{!! Form::label('message', 'Your message') !!}
