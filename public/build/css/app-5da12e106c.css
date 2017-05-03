@@ -2870,7 +2870,7 @@ footer a {
 /* end same nav */
 /* form styling */
 section.map {
-  padding-top: 8.4%;
+  padding-top: 8%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: stretch;
@@ -2914,6 +2914,7 @@ section.map {
       background: #777; }
   .form-container button {
     width: 100%;
+    height: 40px;
     background: #333; }
 
 /*end form styling */
