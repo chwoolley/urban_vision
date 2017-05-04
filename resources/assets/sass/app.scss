@@ -284,6 +284,8 @@ section.map{
 	background:$fullBlack;
 	align-items:center;
 	justify-content:center;
+	padding-top:20px;
+	padding-bottom:20px;
 	
 	form{
 		width:90%;
@@ -448,6 +450,10 @@ section.map{
 
 						}
 					}
+				a{
+
+					border:0px;
+				}	
 			}
 
 /*end form styling */
@@ -590,7 +596,7 @@ height:auto;
 	display:flex;
 	flex-direction:row;
 	flex-wrap: wrap; 
-
+	justify-content:flex-start;	
 	}
 
 .gallery-item{
@@ -605,6 +611,13 @@ height:auto;
    	background-position: center; 
    	background-size:cover;}
 
+.gallery-end{
+	
+	background:url(/assets/uv_logo.png);
+	   	background-position: center; 
+   	background-size:cover;
+
+}
 
 footer{
 
@@ -767,7 +780,7 @@ justify-content:space-between;
 	display:flex;
 	flex-direction:row;
 	flex-wrap: wrap; 
-
+	
 	}
 
 .gallery-item{

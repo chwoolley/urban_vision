@@ -6,7 +6,7 @@
 
 <div class="content-wrapper-single">
 <a href="../gallery">Back to Gallery</a>
-	<h5>{{$singleTatt->title}}</h5>
+	<h2 class="display">{{$singleTatt->title}}</h2>
 <img src="../assets/tattoos/{{$singleTatt->image_path}}">	
 <p>{{$singleTatt->description}}</p>
 </div>

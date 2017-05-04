@@ -35,7 +35,9 @@ public function edit($id)
 
 
 public function edited(Request $req, $id){
-       
+       $editTattoo = Tattoo::find($id);
+
+
         $imageTitle = $req->title;
         $imageDescription = $req->description;
         $tattType = $req->type;
@@ -43,13 +45,17 @@ public function edited(Request $req, $id){
        //breaking the image out into big file object - easier to access
        $imageUpload = $req->file('image_upload');
 
-       $validator = Validator::make( $req->all(), $this->rules());
+       $validator = Validator::make( $req->all(), [
+          'image_upload' => 'mimes:jpeg,jpg,png,gif|max:10000'
+        ]);
 
        if ($validator->fails()) {
                session()->flash('upload_fail', 'you fucked up');
        }else{
 
-       //Getting the images properties
+          if($req->hasFile('image_upload')){
+
+              //Getting the images properties
        $uploadName = $imageUpload->getClientOriginalName();
        $filetype = $imageUpload->getClientOriginalExtension();
        $filemimetype = $imageUpload->getClientMimeType();
@@ -66,19 +72,17 @@ public function edited(Request $req, $id){
        // this is specifying where to put the file I am uploading
        $newfileobj = $imageUpload->move ( base_path() . '/public/assets/tattoos', $fileName);
 
+       $editTattoo->image_path = $fileName;
+          }
+     
 
-        // return ($allInfo);
-        // return ($newfileobj);
-             // return([$uploadName, $filetype, $filemimetype, $filesize, $filelocation, $name, $imageTitle, $imageDescription, $tattType, $imageUpload]);
-          
 
-          // $allInfo = $req->all();
-       //the actual upload here
 
-      $editTattoo = Tattoo::find($id);
+
+      
       $editTattoo->type = $tattType;
       $editTattoo->title = $imageTitle;
-      $editTattoo->image_path = $fileName;
+      
       $editTattoo->description = $imageDescription;
 
       $editTattoo->save();

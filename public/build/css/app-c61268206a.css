@@ -2940,7 +2940,9 @@ section.map {
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px; }
   .form-container form {
     width: 90%;
     border: 0px; }
@@ -3049,6 +3051,8 @@ section.map {
       background: #333;
       color: #999;
       box-shadow: 2px 2px 0px 0px #999; }
+  .form-container a {
+    border: 0px; }
 
 /*end form styling */
 button {
@@ -3164,7 +3168,9 @@ button {
     -ms-flex-direction: row;
     flex-direction: row;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
   .gallery-item {
     width: 25%;
     height: 300px;
@@ -3176,6 +3182,10 @@ button {
     -ms-flex-align: center;
     align-items: center;
     object-fit: contain;
+    background-position: center;
+    background-size: cover; }
+  .gallery-end {
+    background: url(/assets/uv_logo.png);
     background-position: center;
     background-size: cover; }
   footer {

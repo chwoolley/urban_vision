@@ -17,6 +17,8 @@
 
 @endforeach
 
+<div class="gallery-item gallery-end"><a href="contact" class="bl-box"><span class="project-title">Like what you see?<br>Get in touch</a></div>
+
 </div>
 
 @endsection
