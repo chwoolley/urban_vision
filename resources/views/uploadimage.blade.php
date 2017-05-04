@@ -22,9 +22,9 @@
 <div class="form-container">
 
 <form method="POST" action="/upload/file" accept-charset="UTF-8" enctype="multipart/form-data">
-{{-- {!! Form::open(['url' => route('uploaded'), 'files'=>true]) !!} --}}
+{!! Form::open(['url' => route('uploaded'), 'files'=>true]) !!}
 <fieldset>
-<input type="hidden" name="_token" value="{{ csrf_token() }}">
+
 {!! Form::label('image_upload', 'click to choose file') !!}
 <label class='uploadButton'>Browse..
 {!! Form::file('image_upload', array('class'=>'upload'))!!}
