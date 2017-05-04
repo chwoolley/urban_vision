@@ -1,5 +1,4 @@
-   
- <nav>
+   <nav>
 
 
             <ul class='navigation'>
