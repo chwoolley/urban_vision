@@ -12,24 +12,21 @@
 	<h3>Drop us a message</h3>
 <fieldset>
 	{!! Form::label('name', 'Name:') !!}
-	{!! Form::text('name', 'Your name here') !!}
+	{!! Form::text('name', null, array('placeholder'=>'Your name here'))!!}
 	{!! Form::label('email', 'Email:') !!}
-	{!! Form::text('email', 'example@example.com') !!}
+	{!! Form::text('email', null,  array('placeholder'=>'Your email address')) !!}
 		{!! Form::label('phone', 'Phone:') !!}
-	{!! Form::text('phone', '123456') !!}
+	{!! Form::text('phone', null, array('placeholder' =>'123456')) !!}
 		{!! Form::label('message', 'Your message') !!}
-	{!! Form::textarea('message', 'Your message here') !!}
+	{!! Form::textarea('message', null, array('placeholder'=>'Your message here')) !!}
 </fieldset>
 
-{!! Form::button('Contact Us!', array('class'=>'button', 'id'=>'button')) !!}
+{!! Form::button('SUBMIT', array('class'=>'button', 'id'=>'button')) !!}
 
 	{!! Form::close() !!}
 
 </div>
-<ul><li>Phone:</li>
-<li>Email:</li>
-<li>Whats App:</li>
-</ul>
+
 </section>
 
 <section class="map">

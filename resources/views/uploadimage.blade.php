@@ -5,9 +5,9 @@
 
 
 
+<div class="content-single">
 
-
-<div>
+<div success messages>
 @if ( session('upload_fail'))
 <p>{!! session('upload_fail') . $errors->first() !!}</p>
 @endif
@@ -19,36 +19,47 @@
 
 </div>
 
-
-
+<div class="content-wrapper-single">
+<div class="form-container">
 {!! Form::open(['url' => route('uploaded'), 'files'=>true]) !!}
 <fieldset>
-<div>
+
 {!! Form::label('image_upload', 'click to choose file') !!}
-{!! Form::file('image_upload') !!}
-
-
+<label class='uploadButton'>Browse..
+{!! Form::file('image_upload', array('class'=>'upload'))!!}
+</label>
+{!! Form::text('upload title', null, array('placeholder'=>'0 files selected', 'disabled'=>'disabled', 'class'=>'filePath')) !!}
 
 {!! Form::label('title', 'Title') !!}
-{!! Form::text('title') !!}
-
-{!! Form::label('description', 'Enter a Description') !!}
-{!! Form::text('description') !!}
-
-
+{!! Form::text('title', null, array('placeholder'=>'Title')) !!}
 
 {!! Form::label('type', 'Type') !!}
-{!! Form::select('type', array('classic' => 'classic','contemporary' => 'contemporary','tribal' => 'tribal' , 'geometric' => 'geometric','stylized' => 'stylized'), 'classic') !!}
+{!! Form::select('type', array('classic' => 'classic','contemporary' => 'contemporary','tribal' => 'tribal' , 'geometric' => 'geometric','stylized' => 'stylized'), null, array('placeholder'=> 'Select Type')) !!}
 
-</div>
-</fieldset>
-<fieldset>
-{!! Form::submit('Submit') !!}
+{!! Form::label('description', 'Enter a Description') !!}
+{!! Form::textarea('description', null, array('placeholder'=>'Give your piece a description')) !!}
 
+
+
+
+
+
+
+{!! Form::submit('Submit', array('class'=>'submit')) !!}
+{!! Form::reset('Reset', array('class'=>'reset')) !!}
 </fieldset>
 {!! Form::close() !!}
-
-
-
+</div>
+</div>
+</div>
    
+<script type="text/javascript">
+
+document.addEventListener("DOMContentLoaded", function(e){
+document.querySelector(".upload").onchange = function () {
+document.querySelector(".filePath").value = this.value;}
+
+});
+</script>
+
 @endsection
