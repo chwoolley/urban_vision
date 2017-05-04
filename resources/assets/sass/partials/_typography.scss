@@ -1,4 +1,29 @@
+body{
+
+	font-family: 'Open Sans', sans-serif;
+	}
 h1{
+	font-family: 'Open Sans', sans-serif; 
+	font-size:6em; 
+	 
+	  
+	margin-top:0px;
+	margin-bottom:1rem;
+}
+
+h2{ font-family: 'Open Sans', sans-serif; font-size:4em;
+
+	margin-top:0px;
+	margin-bottom:1rem;}
+
+
+h3{ font-family: 'Open Sans', sans-serif; font-size:2em;
+
+	margin-top:1rem;
+	margin-bottom:1rem;}
+
+
+h1.display{
 	font-family:'MyWebFont', Arial, sans-serif; 
 	font-size:6em; 
 	letter-spacing:5px; 
@@ -7,4 +32,21 @@ h1{
 	margin-bottom:1rem;
 }
 
-h2{ font-family:'MyWebFont', Arial, sans-serif; font-size:200px;}
+h2.display{ font-family:'MyWebFont', Arial, sans-serif; font-size:4em;
+	letter-spacing:5px; 
+	text-shadow: 5px 5px $fullBlack;  
+	margin-top:0px;
+	margin-bottom:1rem;}
+
+h3.display{ font-family:'MyWebFont', Arial, sans-serif; font-size:3em;
+	letter-spacing:5px; 
+	text-shadow: 5px 5px $fullBlack;  
+	margin-top:0px;
+	margin-bottom:1rem;}
+
+p{
+	line-height:2;
+	font-family: 'Open Sans', sans-serif;
+}
+
+

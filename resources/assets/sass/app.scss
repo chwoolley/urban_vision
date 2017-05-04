@@ -33,6 +33,7 @@ body{
 	color:$bodyText; 
 }
 
+
 hr{height:8px; color:$lines; background:$lines; font-size:0; border:0; }
 
 
@@ -212,7 +213,6 @@ footer a{color:$footertext;
 .content-wrapper-multiple{
 
 
-
 }
 
 
@@ -227,34 +227,33 @@ footer a{color:$footertext;
 	flex-direction:column;
 }
 
+.content-wrapper-admin{
+margin-top:40px;
+width:90%;
+height:auto;
+margin-bottom:40px;
+display:flex;
+flex-direction:column;
+	
+}
+
+
 .content-wrapper-single{
 margin-top:40px;
 width:60%;
 height:auto;
 margin-bottom:40px;
-
+display:flex;
+flex-direction:column;
 	
 }
 
+.edit-preview{
+width:50%;
+height:auto;
 
-.gallery{
-	width:100%;
-	height:auto;
-	display:flex;
-	flex-direction:row;
-	flex-wrap: wrap; 
+}
 
-	}
-
-.gallery-item{
-
-	width:25%;
-	height:300px;
-    overflow:hidden;
-    display:flex; 
-    justify-content:center; 
-    align-items:center; 
-    object-fit:contain;}
 
 
 /* end same nav */
@@ -453,6 +452,42 @@ section.map{
 
 /*end form styling */
 
+button{
+			width:50%;
+			height:40px;
+			color: $bodyText;
+			background:#555;
+			text-transform:uppercase;
+			border:0px;
+			margin-bottom:20px;
+			-webkit-box-shadow: 2px 2px 0px 0px rgba(255,255,255,0.8);
+			-moz-box-shadow: 2px 2px 0px 0px rgba(255,255,255,0.8);
+			box-shadow: 2px 2px 0px 0px rgba(255,255,255,0.8);
+			transition:all .2s ease-in-out;
+						&:hover{
+						transform:scale(1.1);
+						background:#333;
+						color:#999;
+						-webkit-box-shadow: 2px 2px 0px 0px #999;
+						-moz-box-shadow: 2px 2px 0px 0px #999;
+						box-shadow: 2px 2px 0px 0px #999;
+
+	}
+
+	reset{
+	width:50%;
+	height:40px;
+	color: $bodyText;
+	background:#555;
+	text-transform:uppercase;
+	border:0px;
+	margin-bottom:20px;
+		-webkit-box-shadow: 2px 2px 0px 0px rgba(255,255,255,0.8);
+						-moz-box-shadow: 2px 2px 0px 0px rgba(255,255,255,0.8);
+						box-shadow: 2px 2px 0px 0px rgba(255,255,255,0.8);
+						}
+					}
+
 
 .hero{width:100%; height:auto; margin-top:100px;}
 
@@ -471,7 +506,27 @@ height:100%;
 display:flex;
 flex-direction:column;
 align-items:center;
+justify-content:center;
 background-color:$fullBlack;
+border-radius: 15px 50px;
+ a{
+	border:0px;
+
+ }
+ div{
+ 	width:60%;display:block;
+ 	text-align:center;
+ 	button{
+ 		width:100%;
+ 		text-transform:uppercase;
+ 		font-size:25px;
+ 	
+ 	}
+ }
+ p{
+ 	font-size:25px;
+
+ }		
 
 }
 
@@ -487,6 +542,7 @@ background-color:$fullBlack;
 	flex-direction:column;
 	align-items:center;
 	justify-content:center;
+	margin-top:40px;
 }
 
 
@@ -496,6 +552,10 @@ background-color:$fullBlack;
 	display:flex;
 	flex-direction:row;
 	justify-content: space-between;
+	background:$fullBlack;
+	padding:3em;
+	margin-bottom:40px;
+	border-radius: 15px 50px;
 }
 
 .card section{
@@ -503,6 +563,14 @@ width:45%;
 height:auto;
 
 	a{border-bottom:0px;}
+	article{
+		width:80%;
+		min-height:233px;
+		background:#0a0a0a;
+		display:block;
+		padding:1em;
+		margin-bottom:10px;
+	}
 }
 
 .card-image-preview{
@@ -515,6 +583,27 @@ height:auto;
 	overflow:hidden;
 }
 
+
+.gallery{
+	width:100%;
+	height:auto;
+	display:flex;
+	flex-direction:row;
+	flex-wrap: wrap; 
+
+	}
+
+.gallery-item{
+
+	width:25%;
+	height:300px;
+    overflow:hidden;
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+    object-fit:contain;
+   	background-position: center; 
+   	background-size:cover;}
 
 
 footer{
@@ -574,15 +663,34 @@ nav{
 }
 
 section.latest-work{
-	width:95%;
+	margin-top:20px;
+	width:100%;
 display:flex;
-flex-direction:row;
-justify-content:space-between;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+		
 		
 }
+.latest-work-gallery{
+	width:95%;
+	height:auto;
+	margin-bottom:20px;
+}
+.latest {
+	width:33%;
+	height:300px;
+	overflow:hidden;
+		a{ border-bottm:0px;}
+}
+.content-header{
+	width:95%;
+	margin: 0px auto;
+	height:auto;
+	margin-top:10px;
+	
 
-
-
+}
 
 }
 
@@ -653,7 +761,26 @@ justify-content:space-between;
 		
 }
 
-.gallery{width:32%; height:150px; overflow:hidden;display:flex; justify-content:center; align-items:center; object-fit:contain;}
+.gallery{
+	width:100%;
+	height:auto;
+	display:flex;
+	flex-direction:row;
+	flex-wrap: wrap; 
+
+	}
+
+.gallery-item{
+
+	width:50%;
+	height:300px;
+    overflow:hidden;
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+    object-fit:contain;
+   	background-position: center; 
+   	background-size:cover;}
 
 
 }
@@ -718,13 +845,41 @@ margin-bottom:20px;
    
 }
  h1{
-	text-align:center;
+	
  	font-size:3rem;
  }
 
 
+.gallery-item{
+
+	width:90%;
+	height:300px;
+    overflow:hidden;
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+    object-fit:contain;
+   	background-position: center; 
+   	background-size:cover;}
+
+
+
+
 }
 @include media('<=hiphone'){
+.gallery-item{
+
+	width:90%;
+	height:300px;
+    overflow:hidden;
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+    object-fit:contain;
+   	background-position: center; 
+   	background-size:cover;}
+
+
 header>div{
 
 	width:100%;
@@ -806,6 +961,8 @@ justify-content:space-between;
 
 
 
+
+
 footer{
 
 width:100%;
@@ -844,3 +1001,17 @@ body{
 font-family:'Open-Sans', Arial, sans-serif; font-size:16px;
 
 }
+
+/* effect styling */
+
+
+.project-title{ text-transform:uppercase; font-size:25px;    color:#fff !important;     position:absolute;     pointer-events:none;     text-align:center}
+.project-title:before{    content:'';     border-top:2px solid #fff;     width:15%;     position:absolute;     top:-7px;     left:0;     -webkit-transition:width 1s;     -moz-transition:width 1s;     -o-transition:width 1s;     transition:width 1s}
+.project-title:after{    content:'';     border-top:2px solid #fff;     width:15%;     position:absolute;     bottom:-7px;     right:0;     -webkit-transition:width 1s;     -moz-transition:width 1s;     -o-transition:width 1s;     transition:width 1s}
+
+ 
+
+
+.bl-box{ position:relative;  width:100%;  height:100%;  cursor:pointer;  opacity:0;  display:-webkit-box;  display:-moz-box;  display:-ms-flexbox;  display:-webkit-flex;  display:flex;  -webkit-flex-direction:row;  -ms-flex-direction:row;  flex-direction:row;  -webkit-flex-wrap:wrap;  -ms-flex-wrap:wrap;  flex-wrap:wrap;  -webkit-box-pack:center;  -moz-box-pack:center;  -webkit-justify-content:center;  -ms-flex-pack:center;  justify-content:center;  -webkit-box-align:center;  -moz-box-align:center;  -webkit-align-items:center;  -ms-flex-align:center;  align-items:center;  -webkit-transition:all .2s;  -moz-transition:all .2s;  -o-transition:all .2s;  -ms-transition:all .2s;  transition:all .2s}
+.bl-box:hover{ opacity:1;  background:rgba(0,0,0,0.7)}
+.bl-box:hover .project-title:before, .bl-box:hover .project-title:after{ width:100%}

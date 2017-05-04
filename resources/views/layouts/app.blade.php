@@ -52,11 +52,11 @@
                 </div>
         </section> --}}
   {{--   </div> --}}
-<hr>
-<div>
-    @yield('latest')
 
-</div>
+
+   
+
+
  </main>
             
 <footer>

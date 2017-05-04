@@ -5,7 +5,7 @@
 <div class="content-container">
 
 <section>
-<h1>Contact </h1>
+<h1 class="display">Contact </h1>
 
 <div class="form-container">
 	{!! Form::open ()!!}

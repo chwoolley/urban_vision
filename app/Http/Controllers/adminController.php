@@ -174,10 +174,7 @@ public function edited(Request $req, $id){
         return['image_upload' => 'required|mimes:jpeg,jpg,png,gif|max:10000'];
     }
 
-      public function rules2(){
-          
-        return['image_upload' => 'required|mimes:jpeg,jpg,png,gif|max:10000'];
-    }
+ 
 
 
 
