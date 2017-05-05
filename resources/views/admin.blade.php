@@ -66,7 +66,7 @@
 @else
 <div class="content-wrapper-admin">
 
-
+<h1 class="display">Admin</h1>
 <a href="upload">Add a new tatoo</a> 
 <div class="card-holder">
 

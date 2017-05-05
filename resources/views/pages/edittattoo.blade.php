@@ -67,6 +67,7 @@
 
 
 <div class="content-wrapper-single">
+<h2 class="display">Edit</h2>
 <div class="card">
 
 @if ( session('upload_fail'))
@@ -128,6 +129,7 @@
 
 {!! Form::submit('Submit', array('class'=>'submit')) !!}
 {!! Form::reset('Reset', array('class'=>'reset')) !!}
+<button><a href="../admin">Finished</a></button>
 </fieldset>
 {!! Form::close() !!}
 </div>

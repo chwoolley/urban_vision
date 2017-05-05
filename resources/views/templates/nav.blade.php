@@ -18,6 +18,7 @@
                
                 <li><a href="../contact">Contact</a></li>
                    <li><a href="../admin">admin</a></li>
+                   <li><a href="{{ url('/logout') }}">Logout</a></li>
 
              @endif      
             </ul>

@@ -81,7 +81,7 @@
 </div>
 
 <div class="content-wrapper-single">
-
+<h2 class="display">Add a new tattoo</h2>
 <div class="form-container">
 
 <form method="POST" action="/upload/file" accept-charset="UTF-8" enctype="multipart/form-data">
@@ -111,6 +111,7 @@
 
 {!! Form::submit('Submit', array('class'=>'submit')) !!}
 {!! Form::reset('Reset', array('class'=>'reset')) !!}
+<button><a href="admin">Finished</a></button>
 </fieldset>
 {!! Form::close() !!}
 </div>
