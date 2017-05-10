@@ -17,7 +17,8 @@ class adminController extends Controller
     public function index()
 		    {
 				$adminData = Tattoo::all();
-				return view('admin', compact('adminData'));
+        $page_title = "Admin";
+				return view('admin', compact('adminData', 'page_title'));
 			}
 
 
@@ -26,8 +27,8 @@ public function edit($id)
 {
 
 	$editTatt = Tattoo::find($id);
-
-	return view('pages.edittattoo', compact('editTatt'));
+  $page_title = 'Edit Entry: ' . $editTatt->title; 
+	return view('pages.edittattoo', compact('editTatt', 'page_title'));
 }
 
 
@@ -109,10 +110,10 @@ public function edited(Request $req, $id){
 // stuff here for uploading a new image, taken from upload image controller
 
 	   public function formUpload(){
+        $page_title = "Add New Tattoo";
+        return view('uploadimage', compact('page_title'));
 
-        return view('uploadimage');
     } 
-
 
 	 public function uploaded(Request $req){
        

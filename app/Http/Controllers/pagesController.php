@@ -18,13 +18,13 @@ class pagesController extends Controller
     }
 
         public function about(){
-
-    	return view('pages.about');
+        $page_title = 'About';   
+    	return view('pages.about', compact('page_title'));
     }
 
        public function contact(){
-
-    	return view('pages.contact');
+        $page_title = 'Contact Us';
+    	return view('pages.contact', compact('page_title'));
     }
 
     //   public function gallery(){

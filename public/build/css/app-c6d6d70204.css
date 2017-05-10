@@ -2767,24 +2767,6 @@ main {
   flex: 1;
   margin-top: 20px; }
 
-main div {
-  width: 100%;
-  height: auto;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  display: -ms-flexbox;
-  display: flex; }
-  main div section {
-    width: 45%;
-    height: auto;
-    margin-top: 20px;
-    margin-bottom: 20px; }
-  main div img {
-    width: 100%;
-    height: auto; }
-
 /*  universal navigation stying */
 header nav {
   display: -ms-flexbox;
@@ -3112,6 +3094,23 @@ button {
     font-size: 25px; }
 
 @media (min-width: 1024px) {
+  main div {
+    width: 100%;
+    height: auto;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    display: -ms-flexbox;
+    display: flex; }
+    main div section {
+      width: 45%;
+      height: auto;
+      margin-top: 20px;
+      margin-bottom: 20px; }
+    main div img {
+      width: 100%;
+      height: auto; }
   .card-holder {
     width: 100%;
     height: auto;
@@ -3243,6 +3242,23 @@ button {
     margin-top: 10px; } }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  main div {
+    width: 100%;
+    height: auto;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    display: -ms-flexbox;
+    display: flex; }
+    main div section {
+      width: 45%;
+      height: auto;
+      margin-top: 20px;
+      margin-bottom: 20px; }
+    main div img {
+      width: 100%;
+      height: auto; }
   header > div {
     width: 20%;
     height: auto;
@@ -3261,23 +3277,8 @@ button {
     box-shadow: 3px 5px 0px 0px white; }
   nav ul {
     width: 80%; }
-  main div {
-    width: 100%;
-    height: auto;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -ms-flexbox;
-    display: flex; }
-  div section {
-    width: 95%;
-    height: auto;
-    margin-top: 20px;
-    margin-bottom: 20px; }
-  h1 {
-    font-size: 6rem;
-    text-align: center; }
+  h1.display {
+    font-size: 3.5rem; }
   section.latest-work {
     width: 95%;
     display: -ms-flexbox;
@@ -3317,6 +3318,8 @@ button {
     background-position: 0px 30px; }
   .hero {
     display: none; }
+  h1.display {
+    font-size: 4rem; }
   nav ul {
     width: 100%;
     height: auto;
@@ -3352,8 +3355,6 @@ button {
     height: auto;
     margin-top: 20px;
     margin-bottom: 20px; }
-  h1 {
-    font-size: 3rem; }
   .gallery-item {
     width: 90%;
     height: 300px;
@@ -3369,19 +3370,8 @@ button {
     background-size: cover; } }
 
 @media (max-width: 450px) {
-  .gallery-item {
-    width: 90%;
-    height: 300px;
-    overflow: hidden;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
-    object-fit: contain;
-    background-position: center;
-    background-size: cover; }
+  h1.display {
+    font-size: 3em; }
   header > div {
     width: 100%;
     display: -ms-flexbox;
@@ -3435,9 +3425,9 @@ button {
     flex-direction: column;
     -ms-flex-pack: justify;
     justify-content: space-between; }
-  .gallery {
-    width: 100%;
-    height: 200px;
+  .gallery-item {
+    width: 90%;
+    height: 300px;
     overflow: hidden;
     display: -ms-flexbox;
     display: flex;
@@ -3445,7 +3435,11 @@ button {
     justify-content: center;
     -ms-flex-align: center;
     align-items: center;
-    object-fit: contain; }
+    object-fit: contain;
+    background-position: center;
+    background-size: cover; }
+    .gallery-item a {
+      border: 0px; }
   footer {
     width: 100%;
     background: #000;

@@ -14,8 +14,8 @@ class GalleryController extends Controller
    		// $modeldata =  Tattoo::all();
    		// return view('gallery',compact('modeldata'));
    		$gallerydata = Tattoo::all();
-
-   		return view('gallery', compact('gallerydata'));
+   		$page_title = "Portfolio";
+   		return view('gallery', compact('gallerydata', 'page_title'));
    }
 
 public function show($id)
@@ -23,8 +23,9 @@ public function show($id)
 {
 
 	$singleTatt = Tattoo::find($id);
+	$page_title = $singleTatt->title;			
 
-	return view('pages.gallerysingle', compact('singleTatt'));
+	return view('pages.gallerysingle', compact('singleTatt', 'page_title'));
 }
 
 
